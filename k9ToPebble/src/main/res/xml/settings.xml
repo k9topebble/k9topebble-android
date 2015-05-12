@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    <PreferenceCategory android:title="@string/settings_title"  >
+    	<CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/PREFS_ENABLED"
+            android:summary="@string/enable_summary" 
+            android:title="@string/nenable_title" 
+            android:disableDependentsState="false" >
+        </CheckBoxPreference>
+    	<CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/PREFS_BODY"
+            android:summary="@string/body_summary" 
+            android:title="@string/body_title" 
+            android:disableDependentsState="true" 
+            android:dependency="@string/PREFS_ENABLED" >
+        </CheckBoxPreference>
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/PREFS_SILENT"
+            android:summary="@string/silent_summary" 
+            android:title="@string/silent_title" 
+            android:disableDependentsState="false" 
+            android:dependency="@string/PREFS_ENABLED"
+            >
+        </CheckBoxPreference>    
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/PREFS_QUIET"
+            android:summary="@string/quiet_summary" 
+            android:title="@string/quiet_title" 
+            android:dependency="@string/PREFS_ENABLED"
+            android:disableDependentsState="false" >
+        </CheckBoxPreference>  
+    </PreferenceCategory>
+        	<PreferenceCategory android:title="@string/quiet_category_title"  >
+        	<uk.co.k9topebble.ui.TimePreference 
+        	    android:key="@string/PREFS_START_TIME"
+        	    android:defaultValue="22:00" 
+        	    android:title="@string/quiet_from" 
+            android:dependency="@string/PREFS_QUIET"
+        	    />
+        	<uk.co.k9topebble.ui.TimePreference 
+        	    android:key="@string/PREFS_END_TIME" 
+        	    android:title="@string/quiet_to" 
+        	    android:defaultValue="7:00"
+        	    android:dependency="@string/PREFS_QUIET"
+        	    />
+    </PreferenceCategory>
+   
+    <PreferenceCategory android:title="@string/inbox_category_title" >
+
+        <ListPreference
+            android:key="@string/PREFS_INBOX_SIZE"
+            android:entries="@array/inboxSize"
+            android:summary="@string/inbox_size_summary" 
+            android:entryValues="@array/inboxSize"
+            android:title="@string/inbox_size_title" 
+            android:defaultValue="10"
+            />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/PREFS_UNREAD_ONLY"
+            android:summary="@string/unread_only_summary" 
+            android:title="@string/unread_title" 
+            android:disableDependentsState="false" >
+        </CheckBoxPreference>  
+
+        <ListPreference
+            android:key="@string/PREFS_INBOX_PROVIDER"
+            android:entries="@array/inboxProvider"
+            android:summary="@string/inbox_provider_summary" 
+            android:entryValues="@array/inboxProvider"
+            android:title="@string/inbox_provider_title" 
+            android:defaultValue="@string/com.fsck.k9"
+            />
+
+        </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/text_size_category_title" >
+
+        <ListPreference
+            android:key="@string/PREFS_INBOX_TEXT_SIZE"
+            android:entries="@array/textSize"
+            android:summary="@string/inbox_text_size_summary" 
+            android:entryValues="@array/textSizeValue"
+            android:title="@string/inbox_text_size_title" 
+            android:defaultValue="0"
+            />
+
+       <ListPreference
+            android:key="@string/PREFS_BODY_TEXT_SIZE"
+      		android:entries="@array/textSize"
+            android:summary="@string/body_text_size_summary" 
+            android:entryValues="@array/textSizeValue"
+            android:title="@string/body_text_size_title" 
+            android:defaultValue="0"
+            />
+        
+        </PreferenceCategory>
+         
+</PreferenceScreen>

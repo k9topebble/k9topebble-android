@@ -1,0 +1,45 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textUserSettings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading details."
+            tools:context=".MainActivity" />
+
+    <TextView
+        android:id="@+id/txtVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="17dp"
+        android:layout_marginLeft="19dp"
+        android:gravity="bottom"
+        android:text="@string/version"
+         />
+
+    <Button
+        android:id="@+id/btnInstall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtVersion"
+        android:layout_below="@+id/textErrorMsg"
+        android:layout_marginTop="25dp"
+        android:text="@string/watch_app" />
+
+    <TextView
+        android:id="@+id/textErrorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textUserSettings"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
+<!-- From: file:/C:/Users/andrew/StudioProjects/K9ToPebble/k9ToPebble/src/main/res/layout/activity_main.xml -->

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="inboxSize">
+        <item name="5">5</item>
+        <item name="10">10</item>
+        <item name="15">15</item>
+        <item name="20">20</item>
+        <item name="25">25</item>
+    </string-array>
+    <string-array name="inboxProvider">
+        <item> @string/com.fsck.k9</item>
+        <item> @string/com.kaitenmail.adsupported</item>
+        <item> @string/com.kaitenmail</item>
+        <item> @string/org.koxx.k9ForPureWidget</item>
+    </string-array>
+    <string-array name="textSize">
+        <item> @string/small</item>
+        <item> @string/regular</item>
+        <item> @string/large</item>
+    </string-array>
+    <string-array name="textSizeValue">
+        <item> "1"</item>
+        <item> "0"</item>
+        <item> "2"</item>
+    </string-array>
+    
+    </resources>

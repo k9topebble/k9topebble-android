@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="uk.co.k9topebble"
+    android:sharedUserId="uk.co.edisms"
+    android:sharedUserLabel="@string/shareduserid"
+    android:versionCode="14"
+    android:versionName=" 1.12" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="com.fsck.k9.permission.READ_MESSAGES" />
+    <uses-permission android:name="com.fsck.k9.permission.DELETE_MESSAGES" />
+    <uses-permission android:name="com.kaitenmail.permission.READ_MESSAGES" />
+    <uses-permission android:name="com.kaitenmail.permission.DELETE_MESSAGES" />
+    <uses-permission android:name="com.kaitenmail.adsupported.permission.READ_MESSAGES" />
+    <uses-permission android:name="com.kaitenmail.adsupported.permission.DELETE_MESSAGES" />
+    <uses-permission android:name="org.koxx.k9ForPureWidget.permission.READ_MESSAGES" />
+    <uses-permission android:name="org.koxx.k9ForPureWidget.permission.DELETE_MESSAGES" />
+    <!-- <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/k9_to_pebble"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        android:debuggable="true" 
+        android:name="K9ToPebble"
+        <activity
+            android:name="uk.co.k9topebble.ui.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="uk.co.k9topebble.ui.UserSettingActivity"
+            android:label="@string/app_name" >
+        </activity>
+
+        <service
+            android:name="uk.co.k9topebble.InboxService"
+            android:process=":uk.co.k9topebble.inbox" >
+        </service>
+
+        <receiver
+            android:name="uk.co.k9topebble.K9Reciever"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.fsck.k9.intent.action.EMAIL_RECEIVED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.fsck.k9.intent.action.EMAIL_DELETED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaitenmail.adsupported.intent.action.EMAIL_RECEIVED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaitenmail.adsupported.intent.action.EMAIL_DELETED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaitenmail.intent.action.EMAIL_RECEIVED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.kaitenmail.intent.action.EMAIL_DELETED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.koxx.k9ForPureWidget.intent.action.EMAIL_RECEIVED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="org.koxx.k9ForPureWidget.intent.action.EMAIL_DELETED" />
+
+                <data android:scheme="email" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.getpebble.action.app.RECEIVE" />
+                <action android:name="com.getpebble.action.app.RECEIVE_ACK" />
+                <action android:name="com.getpebble.action.app.RECEIVE_NACK" />
+                <action android:name="com.getpebble.action.app.PEBBLE_CONNECTED" />
+                <action android:name="com.getpebble.action.app.PEBBLE_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="shareduserid">Edisms</string>
+    <string name="version">Version </string>
+    <string name="app_name">K9ToPebble</string>
+    <string name="action_settings">Settings</string>
+    <string name="description_world">Generate notifications for K9 emails!</string>
+    <string name="fromString">From</string>
+    <string name="toString">To</string>
+    <string name="quiet_time">Quiet time</string>
+    <string name="service_enabled">Is service enabled</string>
+    <string name="watch_app">Install Watch App</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">K9 to Pebble</string>
+    <string name="PREFS_NAME">MyPrefsFile</string>
+    <string name="PREFS_ENABLED">Enabled</string>
+    <string name="PREFS_QUIET">Quiet</string>
+    <string name="PREFS_SILENT">Silent</string>
+    <string name="PREFS_START_TIME">StartTime</string>
+    <string name="PREFS_END_TIME">EndTime</string>
+    <string name="PREFS_INBOX_SIZE">InboxSize</string>
+    <string name="PREFS_UUID">UUID</string>
+    <string name="PREFS_UNREAD_ONLY">UNREAD</string>
+    <string name="settings_title">Notification settings</string>
+    <string name="enable_summary">Enable notifications</string>
+    <string name="nenable_title">Notifications</string>
+    <string name="silent_summary">Block notifications when phone on slient</string>
+    <string name="silent_title">Silent notifications</string>
+    <string name="quiet_summary">Use a quiet time when notifcations are not sent</string>
+    <string name="quiet_title">Quiet time range" </string>
+    <string name="quiet_category_title">Quiet time" </string>
+    <string name="quiet_from">From</string>
+    <string name="quiet_to">To</string>
+    <string name="inbox_category_title">Inbox preferences</string>
+    <string name="inbox_size_summary">Size of inbox to send to watch</string>
+    <string name="inbox_size_title">Inbox size</string>
+    <string name="unread_only_summary">Show only unread emails</string>
+    <string name="unread_title">Unread filter</string>
+    <string name="PREFS_INBOX_PROVIDER">PROVIDER</string>
+    <string name="inbox_provider_summary">Select the app to read emails from</string>
+    <string name="inbox_provider_title">Email app</string>
+    <string name="com.fsck.k9">K9 Mail</string>
+    <string name="com.kaitenmail.adsupported">Kaiten Mail (ad)</string>
+    <string name="com.kaitenmail">Kaiten Mail (paid)</string>
+    <string name="org.koxx.k9ForPureWidget">K9 for Pure widget</string>
+    <string name="PREFS_BODY">BODY</string>
+    <string name="body_summary">Send some of the email body in the notification</string>
+    <string name="body_title">Body in notification</string>
+    <string name="PREFS_INBOX_TEXT_SIZE">IBXTXTSIZE</string>
+    <string name="PREFS_BODY_TEXT_SIZE">BODYTXTSIZE</string>
+    <string name="small">Small</string>
+    <string name="regular">Regular</string>
+    <string name="large">Large</string>
+    <string name="text_size_category_title">Text size on watch</string>
+    <string name="inbox_text_size_summary">Text size in inbbox</string> 
+    <string name="inbox_text_size_title">Inbox text size</string> 
+    <string name="body_text_size_summary">Body page text size</string> 
+    <string name="body_text_size_title">Text size in body page</string>     
+    
+</resources>
